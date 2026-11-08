@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <base href="https://cdn.jsdelivr.net/0xPYROSPHERE/moto-ccg@main/1/">
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <title>MotoX3M</title>
+    <script>
+        window.originalImage = window.Image;
+        window.Image = function(width, height) {
+            let image = window.originalImage(width, height);
+            image.crossOrigin = "anonymous";
+            return image;
+        }
+        document.originalCreate = document.createElement;
+        document.createElement = function(tagName, options) {
+            let element = document.originalCreate(tagName, options);
+            if (tagName == "img") element.crossOrigin = "anonymous";
+            return element;
+        }
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    <script type="text/javascript" src="assets/lib/nape.min.js">
+        var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="assets/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/lib/easeljs-0.8.2.combined.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-cachebuster.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-super-storage.min.js"></script>
+    <script type="text/javascript" src="assets/lib/dragonBones.min.js"></script>
+    <script type="text/javascript" src="motox3m4.min.js"></script></body>
+</html>
