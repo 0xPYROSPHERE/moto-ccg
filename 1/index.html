@@ -4,22 +4,35 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <base href="https://cdn.jsdelivr.net/0xPYROSPHERE/moto-ccg@main/1/">
+    <base href="https://cdn.jsdelivr.net/gh/0xPYROSPHERE/moto-ccg@0fd940b1c60f12763103cd48e293b8e6fb07c145/1/">
     <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
     <title>MotoX3M</title>
     <script>
         window.originalImage = window.Image;
         window.Image = function(width, height) {
-            let image = window.originalImage(width, height);
+            let image = new window.originalImage(width, height);
             image.crossOrigin = "anonymous";
             return image;
-        }
+        };
         document.originalCreate = document.createElement;
         document.createElement = function(tagName, options) {
             let element = document.originalCreate(tagName, options);
             if (tagName == "img") element.crossOrigin = "anonymous";
             return element;
-        }
+        };
+
+        window.spoofLocation = {
+            "ancestorOrigins": {},
+            "href": "https://www.coolmathgames.com/sites/default/files/public_games/47685/",
+            "origin": "https://www.coolmathgames.com",
+            "protocol": "https:",
+            "host": "www.coolmathgames.com",
+            "hostname": "www.coolmathgames.com",
+            "port": "",
+            "pathname": "/sites/default/files/public_games/47685/",
+            "search": "",
+            "hash": ""
+        };
     </script>
 </head>
 <body>
@@ -35,6 +48,5 @@
     <script type="text/javascript" src="assets/lib/phaser-cachebuster.min.js"></script>
     <script type="text/javascript" src="assets/lib/phaser-super-storage.min.js"></script>
     <script type="text/javascript" src="assets/lib/dragonBones.min.js"></script>
-    <script type="text/javascript" src="../cmg-ads.js"></script>
     <script type="text/javascript" src="motox3m4.min.js"></script></body>
 </html>
